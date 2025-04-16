@@ -1,18 +1,14 @@
-lista = [12, 15.5, "textos"]
-print(type(lista))
+calorias = []
+resposta = ""
 
-#inserindo novos elementos
-lista.append("teste de inserção")
+while resposta.upper() != "NÃO":
+    caloria = int(input("Quantas calorias você consumiu nesta refeição? "))
+    calorias.append(caloria)
+    resposta = input("Você deseja informar as calorias de mais uma refeição? ")
+total = 0
+for caloria in calorias:
+    print(f"Nesta refeição foram consumidas {caloria} calorias")
+    total = total + caloria
 
-#mostrando a lista inteira
-print(lista)
-
-#mostrando elemento pelo indice
-print(lista[0:3])
-
-#Exibindo com loop
-for valor in lista:
-    print(valor)
-#removendo
-
-#tamanho da lista
+media = total / len(calorias)
+print(f"Neste dia ouve um consumo médio de {media} calorias por refeição")
